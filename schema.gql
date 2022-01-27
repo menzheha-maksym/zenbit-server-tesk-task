@@ -2,6 +2,24 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type ContactType {
+  id: ID!
+  name: String!
+  email: String!
+  message: String!
+}
+
 type Query {
   hello: String!
+  contacts: [ContactType!]!
+}
+
+type Mutation {
+  createContact(input: ContactInput!): ContactType!
+}
+
+input ContactInput {
+  name: String!
+  email: String!
+  message: String!
 }
