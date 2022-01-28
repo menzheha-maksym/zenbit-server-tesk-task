@@ -23,6 +23,9 @@ import { ContactsModule } from './contacts/contacts.module';
       database: process.env.DB_NAME,
       entities: [Contact],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
   ],
   controllers: [AppController],
