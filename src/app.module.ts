@@ -11,6 +11,8 @@ import { ContactsModule } from './contacts/contacts.module';
     ContactsModule,
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
+      introspection: true,
+      playground: true,
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
